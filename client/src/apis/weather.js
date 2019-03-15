@@ -5,7 +5,7 @@ const axios = require('axios');
 const KEY = require('./keys').weather;
 
 export const getWeather = cityName => {
-    return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${KEY}&units=metric`);
+    return axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${KEY}&units=metric`);
 } 
 
 export const generateWeatherInfo = data => {

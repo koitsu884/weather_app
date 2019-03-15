@@ -11,6 +11,7 @@ npm run client-install
 ### create key files
 #### Mongo DB
 Under config folder, need to create 'keys_dev.js' and set mongoURI
+
 ex.
 `module.exports = {
     mongoURI:'mongodb+srv://Kazu:***************@cluster0-fffff.mongodb.net/youngshand?retryWrites=true',

@@ -5,7 +5,9 @@ Shows city list and can get current weather and time for each city
 ## Setting up
 ### install packages
 npm install
+
 npm run client-install
+
 (Alternatively, move foldert to client and run command 'npm install')
 
 ### create key files

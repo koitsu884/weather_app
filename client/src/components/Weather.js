@@ -31,7 +31,7 @@ class Weather extends Component {
     return (
       <div className="card">
         <div className="card-header">
-          {cityInfo.cityName} - {cityInfo.country}
+          {cityInfo.name} - {cityInfo.country}
         </div>
         <div className="card-body">
           <h5>Current Weather: {cityInfo.currentWeather.description}</h5>

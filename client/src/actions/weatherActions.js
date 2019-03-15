@@ -7,7 +7,7 @@ import {
 
 export const getWeatherForCity = (cityName) => (dispatch, getState) => {
     const state = getState();
-    const city = state.cities.find(city => city.cityName === cityName );
+    const city = state.cities.find(city => city.name === cityName );
     if(city && !city.currentWeather){
         dispatch(setLoading());
 

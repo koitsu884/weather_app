@@ -4,14 +4,20 @@ import{
     SET_CITYINDEX, 
     SET_LOADING, 
     GET_TIME_INFO,
-    DELETE_CITY
+    DELETE_CITY,
+    ADD_CITY,
+    OPEN_CITY_MODAL,
+    CLOSE_CITY_MODAL,
+    GET_ERRORS
 } from '../actions/types';
 
 const initialState = {
     cities: [],
     selectedCityIndex: null,
     timeInfo: null,
-    loading: false
+    loading: false,
+    errors: {},
+    cityModalOpen: false,
 }
 
 export default function(state = initialState, action){
@@ -24,10 +30,29 @@ export default function(state = initialState, action){
                 cities: action.payload,
                 selectedCityIndex: null
             }
+        case ADD_CITY:
+        console.log(action.payload);
+            return {
+                ...state,
+                cities: [ action.payload, ...state.cities],
+                errors: {},
+                cityModalOpen: false
+            }
         case DELETE_CITY:
             return {
                 ...state,
-                cities: state.cities.filter(city => city.id !== action.payload)
+                cities: state.cities.filter(city => city._id !== action.payload)
+            }
+        case OPEN_CITY_MODAL:
+            return {
+                ...state,
+                cityModalOpen: true,
+                errors:{}
+            }
+        case CLOSE_CITY_MODAL:
+            return {
+                ...state,
+                cityModalOpen: false
             }
         case SET_CITYINDEX:
             return {
@@ -39,7 +64,7 @@ export default function(state = initialState, action){
             cityIndex = null;
             if(action.payload)
             {
-                cityIndex = tempCities.findIndex(city => city.cityName === action.payload.cityName)
+                cityIndex = tempCities.findIndex(city => city.name === action.payload.cityName)
                 if(cityIndex){
                     tempCities[cityIndex].currentWeather = action.payload;
                 }
@@ -59,6 +84,11 @@ export default function(state = initialState, action){
             return {
                 ...state,
                 loading: true
+            }
+        case GET_ERRORS:
+            return {
+                ...state,
+                errors: action.payload
             }
         default:
             return state;

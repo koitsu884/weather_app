@@ -1,6 +1,10 @@
 export const GET_CITIES = 'GET_CITIES';
 export const SET_CITYINDEX = 'SET_CITYINDEX';
 export const DELETE_CITY = 'DELETE_CITY';
+export const ADD_CITY = 'ADD_CITY';
+export const OPEN_CITY_MODAL = 'OPEN_CITY_MODAL';
+export const CLOSE_CITY_MODAL = 'CLOSE_CITY_MODAL';
 export const GET_WEATHER = 'GET_WEATHER';
 export const GET_TIME_INFO = 'GET_TIME_INFO';
 export const SET_LOADING = 'SET_LOADING';
+export const GET_ERRORS = 'GET_ERRORS';

@@ -28,15 +28,15 @@ Currentry using -
 Weather API from Open weather map (https://openweathermap.org/)
 Getting current time API from World weather online (https://www.worldweatheronline.com)
 
-# Available scripts
-## npm server
+## Available scripts
+### npm server
 will run commands 'nodemon server.js'
 
-## npm client
+### npm client
 will run commands 'npm start --prefix client'
 
-## client-install
+### client-install
 will run commands 'npm install --prefix client'
 
-## npm run dev
+### npm run dev
 Run commands 'npm run server' and 'npm run client' at once

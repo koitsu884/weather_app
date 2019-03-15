@@ -12,21 +12,21 @@ npm run client-install
 #### Mongo DB
 Under config folder, need to create 'keys_dev.js' and set mongoURI
 ex.
-module.exports = {
+`module.exports = {
     mongoURI:'mongodb+srv://Kazu:***************@cluster0-fffff.mongodb.net/youngshand?retryWrites=true',
-};
+};`
 
 #### API
 Under client/source/apis folder, need to create 'key.js' and set keys for weather and time API
 ex.
-module.exports = {
+`module.exports = {
     weather: '432lkpkladlpLPflppdalo',
     time: 'fkaofkaojmera744kqof8al2'
-}
+}`
 
 Currentry using -
-Weather API from Open weather map (https://openweathermap.org/)
-Getting current time API from World weather online (https://www.worldweatheronline.com)
+Weather API from Open weather map (<https://openweathermap.org/>)
+Getting current time API from World weather online (<https://www.worldweatheronline.com>)
 
 ## Available scripts
 ### npm server
